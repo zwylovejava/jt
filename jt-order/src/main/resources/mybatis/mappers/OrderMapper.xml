@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.order.mapper.OrderMapper">
+	
+	<!-- 此方法要实现批量插入 当执行此方法后 会向三张表表插入数据
+	注意:要开启mybatis的批量更新 要在 jdbc.properties
+	配置 &allowMultiQueries=true		 -->
+	<insert id="createOrder" parameterType="Order">
+		insert into tb_order values()
+		insert into tb_order_shipping values()
+		insert into tb_order_item values()
+	</insert>
+</mapper>
